@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>V Chandu | Portfolio</title>
+
+<meta name="description" content="V Chandu - Electronics and Communication Engineering Student | Aspiring Software Developer">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#08111f;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#2563eb;
+filter:blur(220px);
+top:-200px;
+left:-120px;
+opacity:.4;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:450px;
+height:450px;
+background:#7c3aed;
+filter:blur(220px);
+bottom:-200px;
+right:-120px;
+opacity:.35;
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(10,15,30,.75);
+backdrop-filter:blur(18px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:120px 8%;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text h2{
+font-size:28px;
+margin-bottom:20px;
+color:#cbd5e1;
+}
+
+.hero-text p{
+line-height:1.8;
+font-size:18px;
+margin-bottom:30px;
+color:#cbd5e1;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#2563eb;
+border-radius:40px;
+color:white;
+text-decoration:none;
+margin-right:15px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:#1d4ed8;
+}
+
+.btn2{
+display:inline-block;
+padding:14px 30px;
+border:2px solid #38bdf8;
+border-radius:40px;
+text-decoration:none;
+color:#38bdf8;
+transition:.3s;
+}
+
+.btn2:hover{
+background:#38bdf8;
+color:#08111f;
+}
+
+.profile{
+width:300px;
+height:300px;
+border-radius:50%;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:120px;
+box-shadow:0 0 40px rgba(56,189,248,.5);
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+.card{
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">V CHANDU</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Hello, I'm <span>V Chandu</span></h1>
+
+<h2 id="typing">ECE Student</h2>
+
+<p>
+Passionate about Software Development, Java, Python,
+Web Development and Embedded Systems.
+Currently building projects and preparing for software careers.
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
+
+<a href="#contact" class="btn2">Contact Me</a>
+
+</div>
+
+<div class="profile">
+💻
+</div>
+
+</section>
