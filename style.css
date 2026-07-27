@@ -201,3 +201,18 @@ transition:1s;
 opacity:1;
 transform:translateY(0);
 }
+.side-intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.side-intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.side-intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
