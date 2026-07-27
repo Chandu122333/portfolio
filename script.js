@@ -1,51 +1,106 @@
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-anchor.addEventListener('click',function(e){
-e.preventDefault();
-document.querySelector(this.getAttribute('href')).scrollIntoView({
-behavior:'smooth'
-});
-});
+// ==========================
+// LOADER
+// ==========================
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  if (loader) {
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 800);
+  }
 });
 
-// Typing animation
-const words=[
-"Software Developer",
-"Java Developer",
-"Python Developer",
-"Web Developer",
-"AI Enthusiast"
+// ==========================
+// TYPING EFFECT
+// ==========================
+
+const typing = document.getElementById("typing");
+
+const words = [
+  "Software Developer",
+  "Java Developer",
+  "Python Developer",
+  "Web Developer",
+  "AI Enthusiast"
 ];
 
-let i=0;
-let j=0;
-let current="";
-let isDeleting=false;
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-const typing=document.querySelector(".typing");
+function typeEffect() {
+  if (!typing) return;
 
-function type(){
+  const current = words[wordIndex];
 
-current=words[i];
+  if (!deleting) {
+    typing.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
+    }
+  } else {
+    typing.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
 
-if(!isDeleting){
-typing.textContent=current.substring(0,j++);
-if(j>current.length){
-isDeleting=true;
-setTimeout(type,1500);
-return;
-}
-}else{
-typing.textContent=current.substring(0,j--);
-if(j<0){
-isDeleting=false;
-i=(i+1)%words.length;
-}
-}
-
-setTimeout(type,isDeleting?60:120);
+  setTimeout(typeEffect, deleting ? 60 : 100);
 }
 
-if(typing){
-type();
-}
+typeEffect();
+
+// ==========================
+// SCROLL ANIMATION
+// ==========================
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".fade").forEach(el => {
+  observer.observe(el);
+});
+
+// ==========================
+// SMOOTH SCROLL
+// ==========================
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
+// ==========================
+// FLOATING PROFILE
+// ==========================
+
+const profile = document.querySelector(".profile-card");
+
+window.addEventListener("mousemove", (e) => {
+  if (!profile) return;
+
+  const x = (window.innerWidth / 2 - e.clientX) / 40;
+  const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+  profile.style.transform =
+    `rotateY(${-x}deg) rotateX(${y}deg)`;
+});
