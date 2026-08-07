@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>V Chandu | Portfolio</title>
+<title>V Chandu | ECE Engineer Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,47 +15,94 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </head>
 
+
 <body>
 
 
-<!-- Side Menu Button -->
+<!-- Background Animation -->
+
+<div class="bg-animation">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+
+
+
+<!-- Menu Button -->
 
 <div class="menu-btn" onclick="openMenu()">
 <i class="fa-solid fa-bars"></i>
 </div>
 
 
-<!-- Side Menu -->
 
-<div class="side-menu" id="sideMenu">
+
+
+<!-- Side Navigation -->
+
+<nav class="side-menu" id="sideMenu">
+
 
 <div class="close-btn" onclick="closeMenu()">
 <i class="fa-solid fa-xmark"></i>
 </div>
 
 
-<h2>Chandu<span>.</span></h2>
+<h2>
+Chandu<span>⚡</span>
+</h2>
 
 
-<a onclick="showSlide('home')">Home</a>
-
-<a onclick="showSlide('about')">About</a>
-
-<a onclick="showSlide('skills')">Skills</a>
-
-<a onclick="showSlide('projects')">Projects</a>
-
-<a onclick="showSlide('certificates')">Certificates</a>
-
-<a onclick="showSlide('contact')">Contact</a>
+<a onclick="showSlide('home')">
+Home
+</a>
 
 
-</div>
+<a onclick="showSlide('about')">
+About
+</a>
+
+
+<a onclick="showSlide('education')">
+Education
+</a>
+
+
+<a onclick="showSlide('skills')">
+Skills
+</a>
+
+
+<a onclick="showSlide('projects')">
+Projects
+</a>
+
+
+<a onclick="showSlide('experience')">
+Experience
+</a>
+
+
+<a onclick="showSlide('certificates')">
+Certificates
+</a>
+
+
+<a onclick="showSlide('contact')">
+Contact
+</a>
+
+
+</nav>
 
 
 
 
-<!-- HOME SLIDE -->
+
+
+<!-- HOME -->
 
 
 <section class="slide active" id="home">
@@ -63,10 +111,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <div class="hero">
 
 
-<div class="hero-content">
+<div class="hero-text">
 
 
-<h3>Hello 👋 I'm</h3>
+<p class="hello">
+Hello, I'm 👋
+</p>
 
 
 <h1>
@@ -74,50 +124,93 @@ V Chandu
 </h1>
 
 
-<h2>
-ECE Engineer | Developer
-</h2>
+<h2 id="typing"></h2>
+
 
 
 <p>
 
-Building creative projects in 
-Web Development, AI, IoT and Embedded Systems.
+B.Tech Electronics & Communication Engineering Student.
+
+<br>
+
+Aspiring Software Developer | AI Enthusiast | IoT Explorer
 
 </p>
 
 
+
+<div class="hero-buttons">
+
 <button onclick="showSlide('projects')">
-Explore My Work
+View Projects
 </button>
+
+
+<button class="outline">
+Download Resume
+</button>
+
+</div>
+
+
 
 
 <div class="social-icons">
 
+<a>
 <i class="fab fa-github"></i>
+</a>
 
+
+<a>
 <i class="fab fa-linkedin"></i>
+</a>
 
+
+<a>
 <i class="fa-solid fa-envelope"></i>
+</a>
 
 
 </div>
 
 
+
 </div>
 
 
 
-<div class="profile-card">
 
-<div class="profile-circle">
+
+
+
+<div class="profile-area">
+
+
+<div class="profile-ring">
+
+<div class="profile-photo">
 
 VC
 
 </div>
 
+</div>
+
+
+
+<div class="role-card">
+
+Electronics Engineer
 
 </div>
+
+
+
+</div>
+
+
 
 
 </div>
@@ -129,14 +222,16 @@ VC
 
 
 
-<!-- ABOUT SLIDE -->
+
+
+<!-- ABOUT -->
 
 
 <section class="slide" id="about">
 
 
 <h1>
-About Me 🚀
+About Me
 </h1>
 
 
@@ -145,14 +240,13 @@ About Me 🚀
 
 <p>
 
-I am V Chandu,
-B.Tech Electronics and Communication Engineering student.
+I am V Chandu, a passionate Electronics and Communication
+Engineering student.
 
-Passionate about software development,
-Artificial Intelligence, IoT and modern technologies.
+I have interest in Software Development, Artificial
+Intelligence, Web Technologies, IoT and Embedded Systems.
 
-I love creating innovative solutions
-and improving my skills every day.
+I enjoy solving problems and creating innovative projects.
 
 </p>
 
@@ -166,49 +260,141 @@ and improving my skills every day.
 
 
 
-<!-- SKILLS SLIDE -->
+
+
+<!-- EDUCATION -->
+
+
+<section class="slide" id="education">
+
+
+<h1>
+Education 🎓
+</h1>
+
+
+<div class="timeline">
+
+
+<div class="glass-card">
+
+<h3>
+B.Tech ECE
+</h3>
+
+<p>
+Bharat Institute of Engineering and Technology
+</p>
+
+</div>
+
+
+
+<div class="glass-card">
+
+<h3>
+Diploma ECE
+</h3>
+
+<p>
+TRR College of Technology
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- SKILLS -->
 
 
 <section class="slide" id="skills">
 
 
 <h1>
-My Skills 💻
+Technical Skills ⚡
 </h1>
 
 
-<div class="cards">
+
+<div class="skill-container">
 
 
-<div class="card">
+<div class="skill-card">
+
 <i class="fa-brands fa-html5"></i>
-<h3>Web</h3>
-<p>HTML CSS JS</p>
+
+<h3>
+Frontend
+</h3>
+
+<p>
+HTML • CSS • JavaScript
+</p>
+
 </div>
 
 
 
-<div class="card">
+
+<div class="skill-card">
+
 <i class="fa-brands fa-java"></i>
-<h3>Java</h3>
-<p>Programming</p>
+
+<h3>
+Programming
+</h3>
+
+<p>
+Java • C
+</p>
+
 </div>
 
 
 
-<div class="card">
+
+<div class="skill-card">
+
 <i class="fa-solid fa-microchip"></i>
-<h3>IoT</h3>
-<p>Embedded Systems</p>
+
+<h3>
+Embedded
+</h3>
+
+<p>
+IoT • Arduino • Sensors
+</p>
+
 </div>
 
 
 
-<div class="card">
+
+<div class="skill-card">
+
 <i class="fa-solid fa-brain"></i>
-<h3>AI</h3>
-<p>Machine Learning</p>
+
+<h3>
+AI
+</h3>
+
+<p>
+Machine Learning Basics
+</p>
+
 </div>
+
 
 
 </div>
@@ -220,56 +406,83 @@ My Skills 💻
 
 
 
-<!-- PROJECT SLIDE -->
+
+
+<!-- PROJECTS -->
 
 
 <section class="slide" id="projects">
 
 
 <h1>
-My Projects 🔥
+Featured Projects 🚀
 </h1>
 
 
-<div class="cards">
+
+<div class="project-container">
 
 
-<div class="card">
+<div class="project-card">
+
 
 <h3>
 Obstacle Avoider Robot
 </h3>
 
 <p>
-Arduino based smart vehicle.
+Arduino based smart vehicle using ultrasonic sensors.
 </p>
 
-</div>
 
+<button>
+Details
+</button>
 
-<div class="card">
-
-<h3>
-Alcohol Detector
-</h3>
-
-<p>
-MQ-3 sensor safety system.
-</p>
 
 </div>
 
 
 
-<div class="card">
+
+<div class="project-card">
+
 
 <h3>
-Heart Rate Monitor
+Alcohol Detector System
 </h3>
 
 <p>
-Real-time health monitoring.
+MQ-3 sensor based safety monitoring system.
 </p>
+
+
+<button>
+Details
+</button>
+
+
+</div>
+
+
+
+
+<div class="project-card">
+
+
+<h3>
+Heart Rate Monitoring
+</h3>
+
+<p>
+Real-time health monitoring using sensors.
+</p>
+
+
+<button>
+Details
+</button>
+
 
 </div>
 
@@ -283,7 +496,56 @@ Real-time health monitoring.
 
 
 
-<!-- CERTIFICATE SLIDE -->
+
+
+
+<!-- EXPERIENCE -->
+
+
+<section class="slide" id="experience">
+
+
+<h1>
+Experience 💼
+</h1>
+
+
+<div class="glass-card">
+
+
+<h3>
+Internships & Learning
+</h3>
+
+
+<p>
+
+• Electronics & PCB Design
+
+<br><br>
+
+• Full Stack Development Learning
+
+<br><br>
+
+• Web Development Projects
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CERTIFICATES -->
 
 
 <section class="slide" id="certificates">
@@ -296,18 +558,21 @@ Certificates 🏆
 
 <div class="glass-card">
 
+
 <p>
-✔ Robotics Design & Development
+
+🏅 Robotics Design & Development
 
 <br><br>
 
-✔ Virtual Labs Workshop
+🏅 Virtual Labs Workshop
 
 <br><br>
 
-✔ Web Development Learning
+🏅 Technical Learning Certifications
 
 </p>
+
 
 </div>
 
@@ -318,14 +583,17 @@ Certificates 🏆
 
 
 
-<!-- CONTACT SLIDE -->
+
+
+
+<!-- CONTACT -->
 
 
 <section class="slide" id="contact">
 
 
 <h1>
-Let's Connect ❤️
+Contact Me 📩
 </h1>
 
 
@@ -333,19 +601,19 @@ Let's Connect ❤️
 
 
 <p>
-Email:
-yourmail@gmail.com
+
+Let's connect and create something amazing.
 
 <br><br>
 
-GitHub:
-github.com/chandu122333
+Email:
+yourmail@gmail.com
 
 </p>
 
 
 <button>
-Contact Me
+Send Message
 </button>
 
 
@@ -353,6 +621,36 @@ Contact Me
 
 
 </section>
+
+
+
+
+
+
+
+
+<!-- Navigation Dots -->
+
+
+<div class="dots">
+
+<span onclick="showSlide('home')"></span>
+
+<span onclick="showSlide('about')"></span>
+
+<span onclick="showSlide('education')"></span>
+
+<span onclick="showSlide('skills')"></span>
+
+<span onclick="showSlide('projects')"></span>
+
+<span onclick="showSlide('experience')"></span>
+
+<span onclick="showSlide('certificates')"></span>
+
+<span onclick="showSlide('contact')"></span>
+
+</div>
 
 
 
