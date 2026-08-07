@@ -1,627 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>V Chandu | Portfolio</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,Arial,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#050816;
-color:white;
-}
+<!-- Slide 1 -->
+<section class="slide active">
+<div class="card">
+<h1>🌸✨ Hello Mouni Akkaaa ✨🌸</h1>
+<p>
+A small surprise from your Chandu 💖<br>
+Because you are a very special person 😊
+</p>
+<button onclick="nextSlide()">Open Surprise 🎁</button>
+</div>
+</section>
 
 
-/* Header */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#050816;
-position:fixed;
-top:0;
-width:100%;
-z-index:10;
-}
-
-.logo{
-font-size:30px;
-font-weight:bold;
-}
-
-.logo span{
-color:#00ffff;
-}
-
-
-/* Menu Button */
-
-.menu-btn{
-position:fixed;
-right:25px;
-top:25px;
-z-index:1000;
-cursor:pointer;
-}
-
-.menu-btn span{
-display:block;
-width:35px;
-height:4px;
-background:#00ffff;
-margin:6px;
-border-radius:10px;
-}
-
-
-/* Slide Menu */
-
-.slide-menu{
-position:fixed;
-right:-280px;
-top:0;
-height:100%;
-width:280px;
-background:#080d24;
-padding-top:100px;
-transition:.5s;
-z-index:999;
-box-shadow:0 0 30px #00ffff;
-  <!-- Extra Slide -->
+<!-- Slide 2 -->
 <section class="slide">
-    <div class="card">
-        <h1>🌷 Dear Mouni Akkaaa</h1>
-        <p>
-            Nuvvu eppudu happy ga undali 😊<br>
-            Nee face lo smile eppudu undali ✨<br>
-            Life lo vachche problems ni dhairyam ga face cheyyi 💪
-        </p>
-        <button onclick="nextSlide()">Next 💕</button>
-    </div>
+<div class="card">
+<h1>💗 Dear Akkaaa 🌷</h1>
+<p>
+Institute ki daily veltunnava? 😊<br>
+Time ki tinu akka 🍱<br>
+Health ni jagrathaga chusuko 💕
+</p>
+<button onclick="nextSlide()">Next ✨</button>
+</div>
 </section>
 
 
-<!-- Extra Slide -->
+<!-- Slide 3 -->
 <section class="slide">
-    <div class="card">
-        <h1>💫 Small Reminder Akkaaa</h1>
-        <p>
-            Time ki food tinu 🍚<br>
-            Health ni jagrathaga chusuko 🌸<br>
-            Ekkuva alochinchi stress avvaku 😊
-        </p>
-        <button onclick="nextSlide()">Next ✨</button>
-    </div>
+<div class="card">
+<h1>🌈 One Small Request Akkaaa</h1>
+<p>
+Ekkuva alochinchaku 😊<br>
+Stress ni pakkana petti<br>
+Always positive ga undu ✨
+</p>
+<button onclick="nextSlide()">Continue 💖</button>
+</div>
 </section>
 
 
-<!-- Extra Slide -->
+<!-- Slide 4 -->
 <section class="slide">
-    <div class="card">
-        <h1>🌈 Always Remember</h1>
-        <p>
-            Nuvvu chala special person 💖<br>
-            Nee dreams kosam work cheyyi 🌟<br>
-            Positive ga undu, everything will be fine 😊
-        </p>
-        <button onclick="nextSlide()">Next 💕</button>
-    </div>
+<div class="card">
+<h1>👑 You Are Special</h1>
+<p>
+Nee smile chala beautiful 😊<br>
+Nee happiness important 💕<br>
+Eppudu happy ga undali 🌸
+</p>
+<button onclick="nextSlide()">Next 🌟</button>
+</div>
 </section>
 
 
-<!-- Final Slide -->
+<!-- Slide 5 -->
 <section class="slide">
-    <div class="card">
-        <h1>❤️ Love You Akkaaa ❤️</h1>
-        <p>
-            Always stay happy and blessed 🌸<br>
-            Take care of yourself 😊<br><br>
-            — From Chandu 💖
-        </p>
-    </div>
-</section>
-}
-
-.slide-menu.active{
-right:0;
-}
-
-.slide-menu a{
-display:block;
-padding:20px 35px;
-color:white;
-font-size:20px;
-text-decoration:none;
-}
-
-.slide-menu a:hover{
-color:#00ffff;
-}
-
-
-/* Hero */
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-around;
-padding:100px 8%;
-}
-
-
-.hero h1{
-font-size:50px;
-}
-
-.hero h1 span{
-color:#00ffff;
-}
-
-.hero p{
-max-width:600px;
-font-size:18px;
-margin:20px 0;
-line-height:1.6;
-}
-
-
-.btn{
-
-display:inline-block;
-padding:12px 30px;
-background:#00ffff;
-color:black;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-
-}
-
-
-.circle{
-
-height:260px;
-width:260px;
-border-radius:50%;
-background:linear-gradient(45deg,#00ffff,#0055ff);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:100px;
-box-shadow:0 0 50px #00ffff;
-
-}
-
-
-/* Sections */
-
-section{
-padding:70px 8%;
-}
-
-
-h2{
-text-align:center;
-color:#00ffff;
-font-size:35px;
-margin-bottom:30px;
-}
-
-
-.glass,.card,.project{
-
-background:#ffffff10;
-border:1px solid #ffffff20;
-padding:25px;
-border-radius:20px;
-backdrop-filter:blur(10px);
-
-}
-
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-
-}
-
-
-.card{
-text-align:center;
-}
-
-.card i{
-
-font-size:40px;
-color:#00ffff;
-
-}
-
-
-.project h3{
-
-color:#00ffff;
-margin-bottom:10px;
-
-}
-
-
-/* Contact */
-
-.contact{
-
-text-align:center;
-
-}
-
-.contact a{
-
-font-size:40px;
-color:#00ffff;
-margin:20px;
-
-}
-
-
-/* Footer */
-
-footer{
-
-text-align:center;
-padding:20px;
-background:black;
-
-}
-
-
-/* Mobile */
-
-@media(max-width:700px){
-
-.hero{
-
-flex-direction:column;
-text-align:center;
-
-}
-
-.hero h1{
-
-font-size:35px;
-
-}
-
-.circle{
-
-margin-top:40px;
-
-}
-
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<!-- 3 Line Menu -->
-
-<div class="menu-btn" onclick="toggleMenu()">
-
-<span></span>
-<span></span>
-<span></span>
-
-</div>
-
-
-<div class="slide-menu" id="menu">
-
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-
-<header>
-
-<div class="logo">
-V <span>Chandu</span>
-</div>
-
-</header>
-
-
-<section class="hero" id="home">
-
-
-<div>
-
-<h1>
-Hello, I'm <span>V Chandu</span>
-</h1>
-
-
-<h2>
-Software Developer
-</h2>
-
-
+<div class="card">
+<h1>🌟 Believe Yourself 🌟</h1>
 <p>
-Electronics & Communication Engineering Student passionate about Software Development, Java, Python, Web Development, AI and Embedded Systems.
+Nee dreams kosam try cheyyi 💪<br>
+Hard work chesthe success vastundi ✨<br>
+Nenu eppudu support chestha 😊
 </p>
-
-
-<a class="btn" href="#contact">
-Hire Me
-</a>
-
-
+<button onclick="nextSlide()">Final 💝</button>
 </div>
-
-
-<div class="circle">
-
-<i class="fa-solid fa-code"></i>
-
-</div>
-
-
-  </section>
-  <!-- About -->
-
-<section id="about" class="glass">
-
-<h2>About Me</h2>
-
-<p>
-I am a B.Tech Electronics and Communication Engineering student. 
-I am interested in Software Development, Web Technologies, AI, IoT and Embedded Systems.
-I enjoy learning new technologies and building real-world projects.
-</p>
-
 </section>
 
 
-
-<!-- Skills -->
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="cards">
-
-
+<!-- Slide 6 -->
+<section class="slide">
 <div class="card">
-<i class="fab fa-java"></i>
-<h3>Java</h3>
+<h1>💖 Love You Mouni Akkaaa 💖</h1>
+<p>
+Stay happy 🌸<br>
+Stay healthy 🌈<br>
+Keep smiling always 😊<br><br>
+— From Chandu ❤️
+</p>
 </div>
-
-
-<div class="card">
-<i class="fab fa-python"></i>
-<h3>Python</h3>
-</div>
-
-
-<div class="card">
-<i class="fab fa-html5"></i>
-<h3>HTML</h3>
-</div>
-
-
-<div class="card">
-<i class="fab fa-css3-alt"></i>
-<h3>CSS</h3>
-</div>
-
-
-<div class="card">
-<i class="fab fa-js"></i>
-<h3>JavaScript</h3>
-</div>
-
-
-<div class="card">
-<i class="fa-solid fa-microchip"></i>
-<h3>Embedded Systems</h3>
-</div>
-
-
-</div>
-
 </section>
-
-
-
-
-<!-- Projects -->
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-
-<div class="cards">
-
-
-<div class="project">
-
-<h3>Obstacle Avoiding Robot</h3>
-
-<p>
-Arduino based smart robotic vehicle using ultrasonic sensors.
-</p>
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Heart Rate Monitoring</h3>
-
-<p>
-IoT based health monitoring system using sensors.
-</p>
-
-</div>
-
-
-
-
-<div class="project">
-
-<h3>Personal Portfolio</h3>
-
-<p>
-Modern responsive portfolio website.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- Education -->
-
-<section id="education" class="glass">
-
-
-<h2>Education</h2>
-
-
-<p>
-🎓 B.Tech - Electronics & Communication Engineering
-</p>
-
-
-<p>
-JNTU Hyderabad
-</p>
-
-
-<p>
-Hyderabad, Telangana
-</p>
-
-
-</section>
-
-
-
-
-
-<!-- Contact -->
-
-<section id="contact">
-
-
-<h2>Contact</h2>
-
-
-<div class="contact">
-
-
-<a href="mailto:chanduvallepu630@gmail.com">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-
-
-<a href="https://www.linkedin.com/in/v-chandu-75a539246" target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-
-
-<a href="#">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-
-
-<a href="#">
-
-<i class="fab fa-instagram"></i>
-
-</a>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<footer>
-
-© 2026 V Chandu | Portfolio
-
-</footer>
-
-
-
-
-
-<script>
-
-function toggleMenu(){
-
-document.getElementById("menu").classList.toggle("active");
-
-}
-
-
-</script>
-
-
-</body>
-
-</html>
