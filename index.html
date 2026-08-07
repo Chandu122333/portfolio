@@ -1,39 +1,364 @@
-#resume{
-padding:100px 8%;
-text-align:center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-#resume h2{
-font-size:45px;
-color:#38bdf8;
-margin-bottom:20px;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#resume p{
-font-size:18px;
-color:#ddd;
-margin-bottom:35px;
-}
+<title>V Chandu | Portfolio</title>
 
-.resume-box{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
+<link rel="stylesheet" href="style.css">
 
-.resume-btn{
-background:#38bdf8;
-color:white;
-padding:15px 30px;
-border-radius:40px;
-text-decoration:none;
-font-weight:700;
-transition:.3s;
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-.resume-btn:hover{
-background:#0ea5e9;
-transform:translateY(-5px);
-box-shadow:0 0 20px #38bdf8;
-}
+</head>
+
+<body>
+
+
+<!-- Side Menu Button -->
+
+<div class="menu-btn" onclick="openMenu()">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+
+<!-- Side Menu -->
+
+<div class="side-menu" id="sideMenu">
+
+<div class="close-btn" onclick="closeMenu()">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+
+<h2>Chandu<span>.</span></h2>
+
+
+<a onclick="showSlide('home')">Home</a>
+
+<a onclick="showSlide('about')">About</a>
+
+<a onclick="showSlide('skills')">Skills</a>
+
+<a onclick="showSlide('projects')">Projects</a>
+
+<a onclick="showSlide('certificates')">Certificates</a>
+
+<a onclick="showSlide('contact')">Contact</a>
+
+
+</div>
+
+
+
+
+<!-- HOME SLIDE -->
+
+
+<section class="slide active" id="home">
+
+
+<div class="hero">
+
+
+<div class="hero-content">
+
+
+<h3>Hello 👋 I'm</h3>
+
+
+<h1>
+V Chandu
+</h1>
+
+
+<h2>
+ECE Engineer | Developer
+</h2>
+
+
+<p>
+
+Building creative projects in 
+Web Development, AI, IoT and Embedded Systems.
+
+</p>
+
+
+<button onclick="showSlide('projects')">
+Explore My Work
+</button>
+
+
+<div class="social-icons">
+
+<i class="fab fa-github"></i>
+
+<i class="fab fa-linkedin"></i>
+
+<i class="fa-solid fa-envelope"></i>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="profile-card">
+
+<div class="profile-circle">
+
+VC
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ABOUT SLIDE -->
+
+
+<section class="slide" id="about">
+
+
+<h1>
+About Me 🚀
+</h1>
+
+
+<div class="glass-card">
+
+
+<p>
+
+I am V Chandu,
+B.Tech Electronics and Communication Engineering student.
+
+Passionate about software development,
+Artificial Intelligence, IoT and modern technologies.
+
+I love creating innovative solutions
+and improving my skills every day.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SKILLS SLIDE -->
+
+
+<section class="slide" id="skills">
+
+
+<h1>
+My Skills 💻
+</h1>
+
+
+<div class="cards">
+
+
+<div class="card">
+<i class="fa-brands fa-html5"></i>
+<h3>Web</h3>
+<p>HTML CSS JS</p>
+</div>
+
+
+
+<div class="card">
+<i class="fa-brands fa-java"></i>
+<h3>Java</h3>
+<p>Programming</p>
+</div>
+
+
+
+<div class="card">
+<i class="fa-solid fa-microchip"></i>
+<h3>IoT</h3>
+<p>Embedded Systems</p>
+</div>
+
+
+
+<div class="card">
+<i class="fa-solid fa-brain"></i>
+<h3>AI</h3>
+<p>Machine Learning</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- PROJECT SLIDE -->
+
+
+<section class="slide" id="projects">
+
+
+<h1>
+My Projects 🔥
+</h1>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Obstacle Avoider Robot
+</h3>
+
+<p>
+Arduino based smart vehicle.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Alcohol Detector
+</h3>
+
+<p>
+MQ-3 sensor safety system.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Heart Rate Monitor
+</h3>
+
+<p>
+Real-time health monitoring.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CERTIFICATE SLIDE -->
+
+
+<section class="slide" id="certificates">
+
+
+<h1>
+Certificates 🏆
+</h1>
+
+
+<div class="glass-card">
+
+<p>
+✔ Robotics Design & Development
+
+<br><br>
+
+✔ Virtual Labs Workshop
+
+<br><br>
+
+✔ Web Development Learning
+
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- CONTACT SLIDE -->
+
+
+<section class="slide" id="contact">
+
+
+<h1>
+Let's Connect ❤️
+</h1>
+
+
+<div class="glass-card">
+
+
+<p>
+Email:
+yourmail@gmail.com
+
+<br><br>
+
+GitHub:
+github.com/chandu122333
+
+</p>
+
+
+<button>
+Contact Me
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
